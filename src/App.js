@@ -4,10 +4,12 @@ import {
   Route,
   Redirect
 } from "react-router-dom";
-import Navbar from "./components/Navbar";
+
 
 import VideoList from "./components/VideoList";
 import VideoPlayer from "./components/VideoPlayer";
+import Navbar from "./components/NAvbar";
+
 
 
 function App() {

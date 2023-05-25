@@ -2,7 +2,7 @@ import React from "react";
 import yt from "./yt.png";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const NAvbar = () => {
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-black" data-bs-theme="dark">
@@ -58,4 +58,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NAvbar;

@@ -191,6 +191,25 @@ padding-right: 6px;
     
 }
 
+.cls{
+    margin: 8px;
+    padding-top: 3px;
+    padding-bottom: 0px;
+    background: transparent;
+    border: 0;
+}
+
+.back{
+    font-size: 29px;;
+    
+}
+
+  
+  
+  
+  /* Add any additional styling as needed */
+  
+
 #root{
     background-color: black;
     

@@ -1,8 +1,10 @@
-import React from "react";
+  
 import VideoItem from "./VideoItem";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+
 import Loading from "./Loading";
 import VideoPlayer from "./VideoPlayer";
+
 
 const VideoList = () => {
   const [posts, setPosts] = useState([]);
@@ -13,6 +15,8 @@ const VideoList = () => {
   const [selectedVideoDesc, setSelectedVideoDesc] = useState("");
   const [selectedDp, setSelectedDp] = useState(null);
   const [selectedHandle, setSelectedHandle] = useState(null);
+ 
+ 
 
   const fetchdata = async () => {
     setLoading(true);
@@ -26,6 +30,8 @@ const VideoList = () => {
     fetchdata();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
+
+  
 
   const handlePrev = () => {
     console.log("prev");
@@ -45,15 +51,24 @@ const VideoList = () => {
     setSelectedVideoDesc(desc);
     setSelectedDp(dp);
     setSelectedHandle(handle);
+  
+  
   };
 
+  const handleVideoPlayerClose = () => {
+    setSelectedVideoSrc(null);
+   // Go back to the previous page
+  };
+ 
   return (
     <>
+    
         
       {selectedVideoSrc ? (
         <VideoPlayer
           videoSrc={selectedVideoSrc}
           title={selectedVideoTitle}
+          onClose={handleVideoPlayerClose}
           description={selectedVideoDesc}
           profile={selectedDp}
           handle={selectedHandle}
