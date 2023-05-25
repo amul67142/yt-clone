@@ -19,19 +19,23 @@ https://drive.google.com/file/d/1E3XH7V2AqRet9aU9AEnnjix0cDhDMh8r/view?usp=shari
 ```bash
 git clone https://github.com/amul67142/yt-clone-React-assign.git
 ```
-2. 2. Navigate to the project directory:
+
+2. Navigate to the project directory:
 
 ```bash
 cd yt-clone-React-assign
 ```
+
 3. Install dependencies:
 
 ```bash
 npm install
 ```
+
 4. Start the development server
 
 ```bash
 npm start
 ```
+
 5. Open your browser and visit `http://localhost:3000` to view the app.
