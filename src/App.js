@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+  Redirect
+} from "react-router-dom";
+import Navbar from "./components/Navbar";
+
+import VideoList from "./components/VideoList";
+import VideoPlayer from "./components/VideoPlayer";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+      <Navbar/>
+      <Switch>
+      
+          <Route exact path="/" component={VideoList} />
+          <Route path="/video/videoId" component={VideoPlayer} />
+          <Route path="/video/*">
+            {/* Handle invalid video URLs or redirect to appropriate page */}
+            <Redirect to="/" />
+            </Route>
+        </Switch>
+      </BrowserRouter>
+    
+    </>
   );
 }
 
