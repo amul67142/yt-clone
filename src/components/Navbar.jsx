@@ -13,7 +13,7 @@ const NAvbar = () => {
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
+            aria-controls="navbarSupportedContent"                                                              //basic navbar from bootstrap further styled in index.css
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
@@ -23,17 +23,17 @@ const NAvbar = () => {
             <ul className="navbar-nav  mb-2 mb-lg-0">
               <li className="nav-item">
                 <a className="nav-link ntxt" aria-current="page" href="/">
-                  <span class="material-icons navico">video_call</span>
+                  <span className="material-icons navico">home</span>
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link ntxt" aria-current="page" href="/">
-                  <span class="material-icons navico">notifications_none</span>
+                  <span className="material-icons navico">notifications_none</span>
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link ntxt" href="/">
-                  <span class="material-icons navico">account_circle</span>
+                  <span className="material-icons navico">account_circle</span>
                 </a>
               </li>
             </ul>

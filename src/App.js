@@ -1,10 +1,4 @@
-import {
-  BrowserRouter,
-  Switch,
-  Route,
-  
-} from "react-router-dom";
-
+import { BrowserRouter, Switch, Route,Redirect } from "react-router-dom";
 
 import VideoList from "./components/VideoList";
 import VideoPlayer from "./components/VideoPlayer";
@@ -12,22 +6,21 @@ import Navbar from "./components/NAvbar";
 
 
 
+//adding routes
 function App() {
   return (
     <>
       <BrowserRouter>
-      <Navbar/>
-      <Switch>
-      
-          <Route exact path="/" component={VideoList} />
-          <Route  path="/video/:videoId" component={VideoPlayer} />
-          {/* <Route path="/video/">
-          
+        <Navbar />
+        <Switch>                                                                           
+         <Route path="/" exact> <VideoList /> </Route>
+          <Route path="/video/:videoId"><VideoPlayer/></Route>
+           <Route path="/video/*">
+            {/* handle invalid url*/}
             <Redirect to="/" />
-            </Route> */}
+            </Route> 
         </Switch>
       </BrowserRouter>
-    
     </>
   );
 }
