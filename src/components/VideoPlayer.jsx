@@ -27,7 +27,7 @@ const VideoPlayer = ({
         <h5 className="vd-title"> {title}</h5>
         <h6 className="handle">
           <img src={profile} className="dp" alt=".." /> {handle}
-          <button type="button" class="btn btn-light rounded-pill subs">
+          <button type="button" className="btn btn-light rounded-pill subs">
             Subscribe
           </button>
         </h6>

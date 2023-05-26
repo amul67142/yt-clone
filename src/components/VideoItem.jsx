@@ -1,5 +1,6 @@
 import React from 'react'
 import {
+  BrowserRouter,
   Link
 } from "react-router-dom";
     
@@ -11,7 +12,7 @@ function VideoItem(props) {
   return (
     
     <div className='my-3'>
-        
+        <BrowserRouter>
         <Link to={`/video/${props.videoId}`} className='videolink'> <div className="card">
         <img src={props.imgUrl} className=" thumb" alt="..."   onClick={handleThumbnailClick}/>
             <div className="card-body">
@@ -20,8 +21,9 @@ function VideoItem(props) {
                
             </div>
             </div></Link>
+            </BrowserRouter>
     </div>
   )
 }
 
-export default VideoItem
+export default VideoItem;

@@ -2,7 +2,7 @@ import {
   BrowserRouter,
   Switch,
   Route,
-  Redirect
+  
 } from "react-router-dom";
 
 
@@ -20,11 +20,11 @@ function App() {
       <Switch>
       
           <Route exact path="/" component={VideoList} />
-          <Route path="/video/videoId" component={VideoPlayer} />
-          <Route path="/video/*">
-            {/* Handle invalid video URLs or redirect to appropriate page */}
+          <Route  path="/video/:videoId" component={VideoPlayer} />
+          {/* <Route path="/video/">
+          
             <Redirect to="/" />
-            </Route>
+            </Route> */}
         </Switch>
       </BrowserRouter>
     
