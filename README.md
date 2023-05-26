@@ -39,3 +39,8 @@ npm start
 ```
 
 5. Open your browser and visit `http://localhost:3000` to view the app.
+
+## 🔗 Link of hosted website
+
+https://youtube-clne.netlify.app/
+
